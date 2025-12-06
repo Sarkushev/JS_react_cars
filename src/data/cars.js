@@ -11,7 +11,7 @@ const cars = [
     description: "Легендарный автомобиль, ставший культовым благодаря аниме 'Initial D'.",
     features: ["Популяризован аниме Initial D", "Идеальный для дрифта", "Выдвижные фары"],
     rating: 9.5,
-    image: "https://images.unsplash.com/photo-1566470461085-9044bdaa8df9?w=800&auto=format&fit=crop",
+    image: "/images/car1.jpg", // Локальное изображение
     category: "Спортивный автомобиль",
     price: "$25,000 - $60,000",
     topSpeed: "200 км/ч",
@@ -29,7 +29,7 @@ const cars = [
     description: "Икона японского автомобилестроения, известная как 'Годзилла'.",
     features: ["Прозвище 'Годзилла'", "Система полного привода ATTESA E-TS"],
     rating: 9.7,
-    image: "https://images.unsplash.com/photo-1580273916557-38b50d7bdc5d?w=800&auto=format&fit=crop",
+    image: "/images/car2.jpg", // Локальное изображение
     category: "Спортивный автомобиль",
     price: "$80,000 - $150,000",
     topSpeed: "250 км/ч",
@@ -47,7 +47,7 @@ const cars = [
     description: "Символ 90-х, прославившийся благодаря фильму 'Форсаж'.",
     features: ["Легендарный двигатель 2JZ-GTE", "Популяризован фильмом 'Форсаж'"],
     rating: 9.6,
-    image: "https://images.unsplash.com/photo-1632219150223-53eacf7a3b5e?w=800&auto=format&fit=crop",
+    image: "/images/car3.jpg", // Локальное изображение
     category: "Спорт-купе",
     price: "$40,000 - $100,000",
     topSpeed: "250 км/ч",
@@ -65,7 +65,7 @@ const cars = [
     description: "Автомобиль с роторным двигателем Ванкеля.",
     features: ["Роторный двигатель Ванкеля", "Идеальное распределение веса"],
     rating: 9.4,
-    image: "https://images.unsplash.com/photo-1632550083463-1a0f6d4b250b?w=800&auto=format&fit=crop",
+    image: "/images/car4.jpg", // Локальное изображение
     category: "Спорт-купе",
     price: "$30,000 - $70,000",
     topSpeed: "250 км/ч",
@@ -83,7 +83,7 @@ const cars = [
     description: "Первый японский суперкар.",
     features: ["Разработан с участием Айртона Сенны", "Алюминиевый кузов"],
     rating: 9.3,
-    image: "https://images.unsplash.com/photo-1624704760287-5d9e39b53f1f?w=800&auto=format&fit=crop",
+    image: "/images/car5.jpg", // Локальное изображение
     category: "Суперкар",
     price: "$60,000 - $120,000",
     topSpeed: "260 км/ч",
@@ -101,7 +101,7 @@ const cars = [
     description: "Ограниченная серия раллийного автомобиля.",
     features: ["Ограниченный тираж (424 экз.)", "Полный привод Symmetrical AWD"],
     rating: 9.2,
-    image: "https://images.unsplash.com/photo-1563720223485-8d6d0c5a1d6b?w=800&auto=format&fit=crop",
+    image: "/images/car6.jpg", // Локальное изображение
     category: "Раллийный автомобиль",
     price: "$250,000 - $400,000",
     topSpeed: "240 км/ч",
