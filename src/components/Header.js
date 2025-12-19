@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getCurrentUser, logout } from '../utils/auth';
 
 function Header() {
   const scrollToCars = () => {
@@ -8,6 +9,15 @@ function Header() {
       carsSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    setCurrentUser(getCurrentUser());
+    const handler = () => setCurrentUser(getCurrentUser());
+    window.addEventListener('authChange', handler);
+    return () => window.removeEventListener('authChange', handler);
+  }, []);
 
   return (
     <header className="header">
@@ -46,6 +56,31 @@ function Header() {
                   <span className="badge bg-danger ms-1">3</span>
                 </Link>
               </li>
+              {!currentUser ? (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">Вход</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/register">Регистрация</Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/create-order">Создать заказ</Link>
+                  </li>
+                  <li className="nav-item">
+                    <button
+                      className="nav-link btn btn-link"
+                      onClick={() => { logout(); window.location.href = '/'; }}
+                      style={{ background: 'none', border: 'none' }}
+                    >
+                      Выход
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
